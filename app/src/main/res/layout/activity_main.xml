@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    android:clickable="true">
+
+
+
+
+    <ImageView
+        android:id="@+id/bk"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/firstlogin"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="450dp"
+        android:text="登 录"
+        android:onClick="firstlogin"
+        android:background="@color/cl"
+        android:textColor="@color/white"/>
+
+
+
+    <com.example.news.MarqueeText
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:textSize="40dp"
+        android:text="欢迎访问南京工业职业技术大学新闻网 欢迎访问南京工业职业技术大学新闻网 欢迎访问南京工业职业技术大学新闻网 欢迎访问南京工业职业技术大学新闻网"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever">
+
+    </com.example.news.MarqueeText>
+
+
+
+
+</RelativeLayout>
