@@ -25,7 +25,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity android:name=".register" />
-        <activity android:name=".firstpage" />
+        <activity android:name=".personal" />
 
     </application>
 

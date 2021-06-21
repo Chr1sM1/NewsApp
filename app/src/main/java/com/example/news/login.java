@@ -1,4 +1,5 @@
 package com.example.news;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -6,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +19,6 @@ public class login extends AppCompatActivity {
     private Button login;
     private EditText count;
     private EditText pwd;
-    private TextView state;
     private List<User> userList;
     private List<User> dataList = new ArrayList<>();
 
@@ -31,7 +32,7 @@ public class login extends AppCompatActivity {
         login= (Button) findViewById(R.id.btn_login);
         count= (EditText) findViewById(R.id.et_username);
         pwd= (EditText) findViewById(R.id.et_password);
-        state= (TextView) findViewById(R.id.state);
+
 
         //点击注册按钮跳转界面
         reg.setOnClickListener(new View.OnClickListener() {
@@ -52,18 +53,21 @@ public class login extends AppCompatActivity {
                 int result=SqliteDB.getInstance(getApplicationContext()).Quer(pass,name);
                 if (result==1)
                 {
-                    state.setText("登录成功！");
+                    Toast.makeText(login.getContext(),"登陆成功",Toast.LENGTH_SHORT).show();
+                    //state.setText("登录成功！");
                     Intent intent3 =new Intent();
                     intent3.setClass(com.example.news.login.this,personal.class);
                     login.this.startActivity(intent3);
                 }
                 else if (result==0){
-                    state.setText("用户名不存在！");
+                    Toast.makeText(login.getContext(),"用户名不存在",Toast.LENGTH_SHORT).show();
+                    //state.setText("用户名不存在！");
 
                 }
                 else if(result==-1)
                 {
-                    state.setText("密码错误！");
+                    Toast.makeText(login.getContext(),"密码错误",Toast.LENGTH_SHORT).show();
+                    //state.setText("密码错误！");
                 }
             }
 
