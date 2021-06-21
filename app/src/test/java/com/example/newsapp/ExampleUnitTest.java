@@ -1,4 +1,4 @@
-package com.example.wechatpage;
+package com.example.newsapp;
 
 import org.junit.Test;
 

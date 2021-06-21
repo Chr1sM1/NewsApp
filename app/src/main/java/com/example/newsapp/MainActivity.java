@@ -1,4 +1,4 @@
-package com.example.wechatpage;
+package com.example.newsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.newsapp.R;
 
 import java.util.ArrayList;
 
