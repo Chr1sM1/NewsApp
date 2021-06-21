@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class login extends AppCompatActivity {
     private Button reg;
     private Button login;
@@ -27,7 +26,7 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-
+    //使用findviewbyId找到按钮
         reg= (Button) findViewById(R.id.btn_reg);
         login= (Button) findViewById(R.id.btn_login);
         count= (EditText) findViewById(R.id.et_username);
@@ -44,19 +43,18 @@ public class login extends AppCompatActivity {
                 login.this.startActivity(intent2);
             }
         });
-
+            //login按钮的点击事件
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name=count.getText().toString().trim();
                 String pass=pwd.getText().toString().trim();
-                //userList=SqliteDB.getInstance(getApplicationContext()).loadUser();
                 int result=SqliteDB.getInstance(getApplicationContext()).Quer(pass,name);
                 if (result==1)
                 {
                     state.setText("登录成功！");
                     Intent intent3 =new Intent();
-                    intent3.setClass(com.example.news.login.this,firstpage.class);
+                    intent3.setClass(com.example.news.login.this,personal.class);
                     login.this.startActivity(intent3);
                 }
                 else if (result==0){
@@ -67,9 +65,9 @@ public class login extends AppCompatActivity {
                 {
                     state.setText("密码错误！");
                 }
-
-
             }
+
+
         });
     }
 
