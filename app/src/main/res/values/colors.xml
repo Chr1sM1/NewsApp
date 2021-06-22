@@ -11,5 +11,11 @@
     <color name="blue">#0C1B080C</color>
     <color name="myBarColor">#FFFFFF</color>
     <color name="titleColor">#000000</color>
+    <color name="skin_text_white_night">#000000</color>
+    <color name="skin_topbar_bg_color_night">#00bfff</color>
+    <color name="divider">#e8e7e7</color>
+    <color name="skin_text_white">#ffffff</color>
+    <color name="skin_topbar_bg_color">#344261</color>
+    <color name="title">#C43F45B5</color>
 
 </resources>

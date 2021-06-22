@@ -5,11 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 
-public class MainActivity extends AppCompatActivity {
+public class FisrtPage extends AppCompatActivity {
     private RelativeLayout firstlogin;
 
 
@@ -26,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 =new Intent();
-                intent1.setClass(com.example.newsapp.MainActivity.this,login.class);
-                MainActivity.this.startActivity(intent1);
+                intent1.setClass(FisrtPage.this,login.class);
+                FisrtPage.this.startActivity(intent1);
             }
         });
     }
