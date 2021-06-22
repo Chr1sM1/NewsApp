@@ -17,8 +17,12 @@
 =======
         android:theme="@style/Theme.Newsapp">
 <!--        默认activity-->
+<<<<<<< HEAD
 >>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
         <activity android:name=".MainActivity">
+=======
+        <activity android:name=".FisrtPage">
+>>>>>>> fa0c12f6ad3b2a2becd875b8ce2c422a55e87838
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,8 +45,15 @@
 <!--        注册组件-->
         <activity android:name=".login" ></activity>
         <activity android:name=".register" ></activity>
+<<<<<<< HEAD
         <activity android:name=".personal" ></activity>
 >>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
+=======
+        <activity android:name=".personal1" ></activity>
+        <activity android:name=".collect" ></activity>
+        <activity android:name=".changepwd" ></activity>
+        <activity android:name=".MainActivity" ></activity>
+>>>>>>> fa0c12f6ad3b2a2becd875b8ce2c422a55e87838
     </application>
 
 </manifest>

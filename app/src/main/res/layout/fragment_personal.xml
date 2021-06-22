@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
->
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-<!-- 我的收藏-->
+            <!-- 我的收藏-->
             <RelativeLayout
                 android:id="@+id/rl_collect"
                 android:layout_width="match_parent"
@@ -199,7 +199,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="#EEEEEE" />
-<!--换肤-->
+            <!--换肤-->
             <RelativeLayout
                 android:id="@+id/rl_skin"
                 android:layout_width="match_parent"
@@ -238,7 +238,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="#EEEEEE" />
-<!--编辑个人资料-->
+            <!--编辑个人资料-->
             <RelativeLayout
                 android:id="@+id/rl_settings"
                 android:layout_width="match_parent"
@@ -277,7 +277,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="#EEEEEE" />
-<!--退出登录-->
+            <!--退出登录-->
             <RelativeLayout
                 android:id="@+id/rl_exit"
                 android:layout_width="match_parent"
@@ -320,6 +320,8 @@
 
         </LinearLayout>
     </LinearLayout>
+
+
 
 
 </RelativeLayout>
