@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">myapp</string>
+=======
+    <string name="app_name">南京工业职业技术大学新闻网</string>
+>>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="account_hint">请输入用户名</string>

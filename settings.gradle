@@ -1,2 +1,6 @@
 include ':app'
+<<<<<<< HEAD
 rootProject.name = "news"
+=======
+rootProject.name = "Newsapp"
+>>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64

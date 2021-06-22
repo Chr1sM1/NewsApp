@@ -15,7 +15,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="278dp"
+=======
+        android:layout_marginTop="250dp"
+>>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
         android:orientation="vertical">
 
         <LinearLayout
@@ -48,7 +52,11 @@
                     android:background="@null"
                     android:hint="@string/account_hint"
                     android:textColor="#000000"
+<<<<<<< HEAD
                     android:text="root"
+=======
+                    android:text=""
+>>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
                     android:textColorHint="#bcbcbc"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -77,7 +85,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:background="@null"
+<<<<<<< HEAD
                     android:text="123456"
+=======
+
+>>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
                     android:inputType="textPassword"
                     android:hint="@string/pwd_hint"
                     android:textColor="#000000"
