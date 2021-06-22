@@ -1,9 +1,13 @@
-package com.example.newsapp;
+package com.example.newsapp.bean;
 
 
 public class User {
 
     private int id;
+    private String username;
+    private String userpwd;
+
+
     public int getId() {
         return id;
     }
@@ -11,8 +15,6 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
-
 
     public String getUsername() {
         return username;
@@ -30,8 +32,7 @@ public class User {
         this.userpwd = userpwd;
     }
 
-    private String username;
-    private String userpwd;
+
 
 }
 

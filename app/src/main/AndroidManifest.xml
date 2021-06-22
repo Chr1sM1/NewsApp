@@ -21,9 +21,10 @@
 <!--        注册组件-->
         <activity android:name=".login" ></activity>
         <activity android:name=".register" ></activity>
-        <activity android:name=".personal" ></activity>
+        <activity android:name=".personal1" ></activity>
         <activity android:name=".collect" ></activity>
         <activity android:name=".changepwd" ></activity>
+        <activity android:name=".MainActivity" ></activity>
     </application>
 
 </manifest>

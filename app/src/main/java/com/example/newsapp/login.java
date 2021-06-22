@@ -1,15 +1,14 @@
 package com.example.newsapp;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.newsapp.db.SqliteDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +49,13 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 String name=count.getText().toString().trim();
                 String pass=pwd.getText().toString().trim();
-                int result=SqliteDB.getInstance(getApplicationContext()).Quer(pass,name);
+                int result= SqliteDB.getInstance(getApplicationContext()).Quer(pass,name);
                 if (result==1)
                 {
                     Toast.makeText(login.getContext(),"登陆成功",Toast.LENGTH_SHORT).show();
                     //state.setText("登录成功！");
                     Intent intent3 =new Intent();
-                    intent3.setClass(com.example.newsapp.login.this,personal.class);
+                    intent3.setClass(com.example.newsapp.login.this,MainActivity.class);
                     login.this.startActivity(intent3);
                 }
                 else if (result==0){
