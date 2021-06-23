@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.newsapp.bean.User;
 import com.example.newsapp.db.SqliteDB;
 
 import java.util.ArrayList;

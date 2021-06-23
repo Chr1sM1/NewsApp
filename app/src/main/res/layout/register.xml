@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
 
-   >
+    >
 
     <ImageView
         android:layout_width="200dp"
@@ -17,11 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="278dp"
-=======
         android:layout_marginTop="250dp"
->>>>>>> 3504cb5f314488f9d048222e6536642b6e407a64
         android:orientation="vertical">
 
         <LinearLayout

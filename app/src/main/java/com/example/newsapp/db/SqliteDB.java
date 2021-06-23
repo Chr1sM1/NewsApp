@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.newsapp.bean.User;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,12 +39,12 @@ public class SqliteDB {
     }
 
 
-    //更新数据库
-
-    public static void updata(String name, String password) {
-            db.execSQL("UPDATE user SET password =? ",new Object[]{password});
-
-        }
+//    //更新数据库
+//
+//    public static void updata(String name, String password) {
+//            db.execSQL("UPDATE user SET password =? ",new Object[]{password});
+//
+//        }
 
 //    public static ArrayList<User> getAllDATA() {
 // 
@@ -54,7 +56,7 @@ public class SqliteDB {
 //                list.add(new User(username,newpwd));
 //            }
 
-    
+
 
     /**
      * 将User实例存储到数据库。

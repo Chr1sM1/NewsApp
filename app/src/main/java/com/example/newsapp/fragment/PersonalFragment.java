@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.example.newsapp.FisrtPage;
+import com.example.newsapp.FirstPage;
 import com.example.newsapp.R;
 import com.example.newsapp.changepwd;
 
@@ -76,7 +76,7 @@ public class PersonalFragment extends Fragment {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getActivity(), FisrtPage.class);
+                Intent intent =new Intent(getActivity(), FirstPage.class);
                 startActivity(intent);
             }
         });

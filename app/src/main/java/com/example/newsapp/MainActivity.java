@@ -9,13 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-<<<<<<< HEAD
-import com.example.newsapp.R;
-=======
 import com.example.newsapp.adapter.MyFragmentPagerAdapter;
 import com.example.newsapp.fragment.BlankFragment;
 import com.example.newsapp.fragment.PersonalFragment;
->>>>>>> zxq
 
 import java.util.ArrayList;
 
@@ -55,11 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(BlankFragment.newInstance("新闻"));
         fragments.add(BlankFragment.newInstance("发现"));
-<<<<<<< HEAD
-        fragments.add(BlankFragment.newInstance("我"));
-=======
         fragments.add(PersonalFragment.newInstance());
->>>>>>> zxq
+
         MyFragmentPagerAdapter PagerAdapter = new MyFragmentPagerAdapter(
                 getSupportFragmentManager(),getLifecycle(),fragments);
         viewPager.setAdapter(PagerAdapter);

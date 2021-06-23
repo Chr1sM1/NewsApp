@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.newsapp.bean.User;
 import com.example.newsapp.db.SqliteDB;
 
 public class register extends AppCompatActivity {
