@@ -1,13 +1,14 @@
-package com.example.newsapp;
+package com.example.newsapp.db;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.newsapp.bean.User;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class SqliteDB {
     /**
@@ -20,8 +21,9 @@ public class SqliteDB {
     public static final int VERSION = 1;
 
     private static SqliteDB sqliteDB;
+    private static SQLiteDatabase db;
 
-    private SQLiteDatabase db;
+//    private SQLiteDatabase db;
 
     private SqliteDB(Context context) {
         OpenHelper dbHelper = new OpenHelper(context, DB_NAME, null, VERSION);
@@ -35,6 +37,26 @@ public class SqliteDB {
         }
         return sqliteDB;
     }
+
+
+//    //更新数据库
+//
+//    public static void updata(String name, String password) {
+//            db.execSQL("UPDATE user SET password =? ",new Object[]{password});
+//
+//        }
+
+//    public static ArrayList<User> getAllDATA() {
+// 
+//            ArrayList<User> list = new ArrayList<User>();
+//            Cursor cursor = db.query("user",null,null,null,null,null,"name DESC");
+//            while(cursor.moveToNext()){
+//                String name = cursor.getString(cursor.getColumnIndex("name"));
+//                String password = cursor.getString(cursor.getColumnIndex("password"));
+//                list.add(new User(username,newpwd));
+//            }
+
+
 
     /**
      * 将User实例存储到数据库。
@@ -66,8 +88,8 @@ public class SqliteDB {
     /**
      * 从数据库读取User信息。
      */
-    public List<User> loadUser() {
-        List<User> list = new ArrayList<User>();
+    public static ArrayList<User> getAllDATA() {
+        ArrayList<User> list = new ArrayList<User>();
         Cursor cursor = db
                 .query("User", null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
@@ -107,6 +129,10 @@ public class SqliteDB {
         else {
             return 0;
         }
+
+
+
+
 
 
     }

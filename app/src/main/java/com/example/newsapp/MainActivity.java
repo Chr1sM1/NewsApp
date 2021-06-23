@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.example.newsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.newsapp.R;
+import com.example.newsapp.adapter.MyFragmentPagerAdapter;
+import com.example.newsapp.fragment.BlankFragment;
+import com.example.newsapp.fragment.PersonalFragment;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         initPager();
         iniTabView();
     }
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(BlankFragment.newInstance("新闻"));
         fragments.add(BlankFragment.newInstance("发现"));
-        fragments.add(BlankFragment.newInstance("我"));
+        fragments.add(PersonalFragment.newInstance());
+
         MyFragmentPagerAdapter PagerAdapter = new MyFragmentPagerAdapter(
                 getSupportFragmentManager(),getLifecycle(),fragments);
         viewPager.setAdapter(PagerAdapter);
@@ -101,42 +103,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         changeTab(v.getId());//获取id
     }
-=======
-package com.example.newsapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-
-
-public class MainActivity extends AppCompatActivity {
-    private RelativeLayout firstlogin;
-
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.firstpage);
-
-        firstlogin = findViewById(R.id.enter);
-
-        firstlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 =new Intent();
-                intent1.setClass(com.example.newsapp.MainActivity.this,login.class);
-                MainActivity.this.startActivity(intent1);
-            }
-        });
-    }
-
-
-
->>>>>>> zxq
 }
