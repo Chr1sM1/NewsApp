@@ -8,20 +8,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Newsapp">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".FirstPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!--        注册组件-->
-        <activity android:name=".login" ></activity>
-        <activity android:name=".register" ></activity>
-        <activity android:name=".collect" ></activity>
-        <activity android:name=".changepwd" ></activity>
-        <activity android:name=".MainActivity" ></activity>
+        </activity> <!-- 注册组件 -->
+        <activity android:name=".login" />
+        <activity android:name=".register" />
+        <activity android:name=".collect" />
+        <activity android:name=".changepwd" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -6,11 +6,15 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.newsapp.adapter.MyFragmentPagerAdapter;
 import com.example.newsapp.fragment.BlankFragment;
+import com.example.newsapp.fragment.FindFragment;
+import com.example.newsapp.fragment.NewsFragment;
 import com.example.newsapp.fragment.PersonalFragment;
 
 import java.util.ArrayList;
@@ -23,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -49,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initPager() {
         viewPager = findViewById(R.id.id_viewPager);
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(BlankFragment.newInstance("新闻"));
-        fragments.add(BlankFragment.newInstance("发现"));
+        fragments.add(NewsFragment.newInstance());
+        fragments.add(FindFragment.newInstance());
         fragments.add(PersonalFragment.newInstance());
 
         MyFragmentPagerAdapter PagerAdapter = new MyFragmentPagerAdapter(
@@ -103,4 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         changeTab(v.getId());//获取id
     }
+
+
 }

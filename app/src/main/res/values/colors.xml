@@ -21,7 +21,8 @@
     <color name="skin_text_white">#ffffff</color>
     <color name="skin_topbar_bg_color">#344261</color>
     <color name="title">#C43F45B5</color>
-    <color name="gary">#F5F5F5</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="colorAccent">#D81B60</color>
 
 
 </resources>

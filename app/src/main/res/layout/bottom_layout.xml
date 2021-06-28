@@ -3,7 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:background="@color/gary">
+    android:background="@color/gray">
 
     <LinearLayout
         android:layout_width="0dp"
