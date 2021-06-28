@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="160dp"
+    android:src="@drawable/logo">
+
+</ImageView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关于我们"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+
+        >
+    </EditText>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="南京工业职业技术大学"
+        android:layout_gravity="center"
+        android:textSize="26dp"
+        android:layout_marginTop="50dp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="软件2058 移动班"
+        android:layout_gravity="center"
+        android:textSize="26dp"
+        android:layout_marginTop="40dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="明思哲 周雪晴 张纪媛"
+        android:layout_gravity="center"
+        android:textSize="26dp"
+        android:layout_marginTop="40dp">
+
+    </TextView>
+</LinearLayout>
