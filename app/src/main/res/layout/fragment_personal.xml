@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +17,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_my_info_bg"
             android:orientation="vertical">
+
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -53,7 +55,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="周雪晴"
+                        android:text="测试"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -72,7 +74,7 @@
                 android:layout_height="62dp"
                 android:gravity="center"
                 android:orientation="horizontal">
-
+                <!--阅读-->
                 <LinearLayout
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
@@ -92,7 +94,7 @@
                         android:text="阅读"
                         android:textColor="@color/black" />
                 </LinearLayout>
-
+                <!--点赞-->
                 <LinearLayout
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
@@ -112,7 +114,7 @@
                         android:text="点赞"
                         android:textColor="@color/black" />
                 </LinearLayout>
-
+                <!--评论-->
                 <LinearLayout
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
@@ -132,7 +134,7 @@
                         android:text="评论"
                         android:textColor="@color/black" />
                 </LinearLayout>
-
+                <!--分享-->
                 <LinearLayout
                     android:layout_width="95dp"
                     android:layout_height="match_parent"
@@ -199,45 +201,45 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="#EEEEEE" />
-            <!--换肤-->
-            <RelativeLayout
-                android:id="@+id/rl_skin"
-                android:layout_width="match_parent"
-                android:layout_height="78dp"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp">
+            <!--            &lt;!&ndash;换肤&ndash;&gt;-->
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/rl_skin"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="78dp"-->
+            <!--                android:paddingLeft="30dp"-->
+            <!--                android:paddingRight="30dp">-->
 
-                <ImageView
-                    android:id="@+id/img_skin"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/huanfu" />
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/img_skin"-->
+            <!--                    android:layout_width="28dp"-->
+            <!--                    android:layout_height="28dp"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:src="@mipmap/huanfu" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@+id/img_skin"
-                    android:text="换肤"
-                    android:textColor="#404040"
-                    android:textSize="16sp" />
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:layout_marginLeft="10dp"-->
+            <!--                    android:layout_toRightOf="@+id/img_skin"-->
+            <!--                    android:text="换肤"-->
+            <!--                    android:textColor="#404040"-->
+            <!--                    android:textSize="16sp" />-->
 
-                <ImageView
-                    android:id="@+id/img2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/icon_left_arrow" />
-            </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="#EEEEEE" />
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/img2"-->
+            <!--                    android:layout_width="20dp"-->
+            <!--                    android:layout_height="20dp"-->
+            <!--                    android:layout_alignParentRight="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:src="@mipmap/icon_left_arrow" />-->
+            <!--            </RelativeLayout>-->
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginLeft="15dp"-->
+            <!--                android:layout_marginRight="15dp"-->
+            <!--                android:background="#EEEEEE" />-->
             <!--编辑个人资料-->
             <RelativeLayout
                 android:id="@+id/rl_settings"
@@ -277,6 +279,48 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="#EEEEEE" />
+
+            <!--关于我们-->
+            <RelativeLayout
+                android:id="@+id/rl_about"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/img_logout1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_logout1"
+                    android:text="关于我们"
+                    android:textColor="#404040"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_left_arrow" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#EEEEEE" />
+
+
             <!--退出登录-->
             <RelativeLayout
                 android:id="@+id/rl_exit"

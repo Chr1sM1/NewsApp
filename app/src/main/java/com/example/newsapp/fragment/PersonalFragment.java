@@ -12,13 +12,16 @@ import android.widget.RelativeLayout;
 
 import com.example.newsapp.FirstPage;
 import com.example.newsapp.R;
+import com.example.newsapp.about;
 import com.example.newsapp.changepwd;
+
 
 public class PersonalFragment extends Fragment {
 
     private RelativeLayout collect;
     private RelativeLayout change;
     private RelativeLayout exit;
+    private RelativeLayout about;
 
     private View rootView;
 
@@ -55,12 +58,13 @@ public class PersonalFragment extends Fragment {
         collect=rootView.findViewById(R.id.rl_collect);
         change=rootView.findViewById(R.id.rl_settings);
         exit=rootView.findViewById(R.id.rl_exit);
-
+        about=rootView.findViewById(R.id.rl_about);
+//收藏
         collect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             Intent intent = new Intent(getActivity(), com.example.newsapp.collect.class);
-             startActivity(intent);
+                Intent intent = new Intent(getActivity(), com.example.newsapp.collect.class);
+                startActivity(intent);
             }
         });
 
@@ -80,9 +84,17 @@ public class PersonalFragment extends Fragment {
                 startActivity(intent);
             }
         });
+//关于我们
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getActivity(), about.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
-
-
 
 }
