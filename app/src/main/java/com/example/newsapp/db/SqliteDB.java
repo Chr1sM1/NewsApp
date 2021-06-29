@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.example.newsapp.bean.User;
 
+import java.sql.SQLInput;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -23,7 +24,7 @@ public class SqliteDB {
     private static SqliteDB sqliteDB;
     private static SQLiteDatabase db;
 
-//    private SQLiteDatabase db;
+
 
     private SqliteDB(Context context) {
         OpenHelper dbHelper = new OpenHelper(context, DB_NAME, null, VERSION);
@@ -39,22 +40,24 @@ public class SqliteDB {
     }
 
 
-//    //更新数据库
-//
-//    public static void updata(String name, String password) {
-//            db.execSQL("UPDATE user SET password =? ",new Object[]{password});
-//
-//        }
+    //更新数据库
+
+    public  static void updata(String name, String password) {
+            db.execSQL("UPDATE user SET userpwd =? where username=?",new Object[]{password,name});
+
+        }
 
 //    public static ArrayList<User> getAllDATA() {
-// 
+//
 //            ArrayList<User> list = new ArrayList<User>();
 //            Cursor cursor = db.query("user",null,null,null,null,null,"name DESC");
 //            while(cursor.moveToNext()){
-//                String name = cursor.getString(cursor.getColumnIndex("name"));
-//                String password = cursor.getString(cursor.getColumnIndex("password"));
-//                list.add(new User(username,newpwd));
+//                String username = cursor.getString(cursor.getColumnIndex("username"));
+//                String userpwd = cursor.getString(cursor.getColumnIndex("userpwd"));
+//                list.add(new User(username,userpwd));
 //            }
+
+
 
 
 
@@ -129,12 +132,6 @@ public class SqliteDB {
         else {
             return 0;
         }
-
-
-
-
-
-
     }
 }
 

@@ -27,6 +27,7 @@
         <activity android:name=".collect" />
         <activity android:name=".changepwd" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".about"/>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -12,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.newsapp.adapter.MyFragmentPagerAdapter;
-import com.example.newsapp.fragment.BlankFragment;
 import com.example.newsapp.fragment.FindFragment;
 import com.example.newsapp.fragment.NewsFragment;
 import com.example.newsapp.fragment.PersonalFragment;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initPager();
         iniTabView();
+
     }
 
     private void iniTabView() {
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
             }
+
         });
     }
 
@@ -112,5 +114,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeTab(v.getId());//获取id
     }
 
-
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        int mFlag = intent.getIntExtra("flag", 0);
+        if (mFlag == 2) { // 返回到个人中心
+            changeTab(mFlag);
+        }
+    }
 }
