@@ -9,5 +9,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="pwd_oldhint">请输入旧密码</string>
+    <string name="pwd_newhint">请输入新密码</string>
 
 </resources>

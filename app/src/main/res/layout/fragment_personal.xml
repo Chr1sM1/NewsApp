@@ -14,8 +14,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_my_info_bg"
+            android:layout_height="200dp"
+            android:background="@drawable/perbk"
             android:orientation="vertical">
 
 
@@ -38,34 +38,35 @@
                 android:layout_height="103dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="19dp">
+                android:paddingLeft="10dp">
 
                 <ImageView
                     android:id="@+id/img_header"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
                     android:src="@drawable/logo" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="测试"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:layout_marginTop="12dp"
+                        android:text="测试用户"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="10dp"
                         android:text="欢迎访问南京工业职业技术大学新闻网"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -74,86 +75,7 @@
                 android:layout_height="62dp"
                 android:gravity="center"
                 android:orientation="horizontal">
-                <!--阅读-->
-                <LinearLayout
-                    android:layout_width="95dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="阅读"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-                <!--点赞-->
-                <LinearLayout
-                    android:layout_width="95dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="30"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="点赞"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-                <!--评论-->
-                <LinearLayout
-                    android:layout_width="95dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="60"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="评论"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-                <!--分享-->
-                <LinearLayout
-                    android:layout_width="95dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="100"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="分享"
-                        android:textColor="@color/black" />
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 

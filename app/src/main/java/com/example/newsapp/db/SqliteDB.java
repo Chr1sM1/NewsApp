@@ -1,15 +1,18 @@
 package com.example.newsapp.db;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.newsapp.bean.NewsData;
 import com.example.newsapp.bean.User;
 
 import java.sql.SQLInput;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class SqliteDB {
     /**
@@ -23,7 +26,6 @@ public class SqliteDB {
 
     private static SqliteDB sqliteDB;
     private static SQLiteDatabase db;
-
 
 
     private SqliteDB(Context context) {
@@ -42,10 +44,11 @@ public class SqliteDB {
 
     //更新数据库
 
-    public  static void updata(String name, String password) {
-            db.execSQL("UPDATE user SET userpwd =? where username=?",new Object[]{password,name});
+    public static void updata(String name, String password) {
+        db.execSQL("UPDATE user SET userpwd =? where username=?", new Object[]{password, name});
+//            SqliteDB.updata(name, password);
 
-        }
+    }
 
 //    public static ArrayList<User> getAllDATA() {
 //
@@ -58,13 +61,10 @@ public class SqliteDB {
 //            }
 
 
-
-
-
     /**
      * 将User实例存储到数据库。
      */
-    public int  saveUser(User user) {
+    public int saveUser(User user) {
         if (user != null) {
            /* ContentValues values = new ContentValues();
             values.put("username", user.getUsername());
@@ -82,8 +82,7 @@ public class SqliteDB {
                 }
                 return 1;
             }
-        }
-        else {
+        } else {
             return 0;
         }
     }
@@ -110,28 +109,76 @@ public class SqliteDB {
         return list;
     }
 
-    public int Quer(String pwd,String name)
-    {
+    public void insertCollection(String newsTitle, String newsData, String newsImageUrl, String newsUrl, String userName) {
+
+        ContentValues values = new ContentValues();
+        values.put("username", userName);
+        values.put("newsTitle", newsTitle);
+        values.put("newsDate", newsData);
+        values.put("newsImgUrl", newsImageUrl);
+        values.put("newsUrl", newsUrl);
+        db.insert("collect", null, values);
+    }
+
+    public void deleteCollection(String title, String name) {
+        db.delete("collect", "newsTitle = ? and username = ?", new String[]{title, name});
+    }
+
+    public List<NewsData> getAllCollection(String name) {
+        Cursor cursor = db.rawQuery("select * from collect where username=?  ", new String[]{name});
+        List<NewsData> newsDataArrayList = new ArrayList<>();
+        NewsData newsData;
+        while (cursor.moveToNext()) {
+            newsData = new NewsData();
+            newsData.setNewsDate(cursor.getString(cursor.getColumnIndex("newsDate")));
+            newsData.setNewsTitle(cursor.getString(cursor.getColumnIndex("newsTitle")));
+            newsData.setNewsImgUrl(cursor.getString(cursor.getColumnIndex("newsImgUrl")));
+            newsData.setNewsUrl(cursor.getString(cursor.getColumnIndex("newsUrl")));
+            newsDataArrayList.add(newsData);
+
+        }
+        return newsDataArrayList;
+    }
+
+    /**
+     * 查询是否收藏
+     *
+     * @param newsTitle
+     * @param name
+     * @return
+     */
+    public int isCollection(String newsTitle, String name) {
 
 
-        HashMap<String,String> hashmap=new HashMap<String,String>();
-        Cursor cursor =db.rawQuery("select * from User where username=?", new String[]{name});
+        HashMap<String, String> hashmap = new HashMap<String, String>();
+        Cursor cursor = db.rawQuery("select * from collect where username=? and newsTitle =? ", new String[]{name, newsTitle});
 
         // hashmap.put("name",db.rawQuery("select * from User where name=?",new String[]{name}).toString());
-        if (cursor.getCount()>0)
-        {
-            Cursor pwdcursor =db.rawQuery("select * from User where userpwd=? and username=?",new String[]{pwd,name});
-            if (pwdcursor.getCount()>0)
-            {
+        if (cursor.getCount() > 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public int Quer(String pwd, String name) {
+
+
+        HashMap<String, String> hashmap = new HashMap<String, String>();
+        Cursor cursor = db.rawQuery("select * from User where username=?", new String[]{name});
+
+        // hashmap.put("name",db.rawQuery("select * from User where name=?",new String[]{name}).toString());
+        if (cursor.getCount() > 0) {
+            Cursor pwdcursor = db.rawQuery("select * from User where userpwd=? and username=?", new String[]{pwd, name});
+            if (pwdcursor.getCount() > 0) {
                 return 1;
-            }
-            else {
+            } else {
                 return -1;
             }
-        }
-        else {
+        } else {
             return 0;
         }
     }
 }
+
 
