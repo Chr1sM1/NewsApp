@@ -14,6 +14,7 @@ import com.example.newsapp.FirstPage;
 import com.example.newsapp.R;
 import com.example.newsapp.about;
 import com.example.newsapp.changepwd;
+import com.example.newsapp.collect;
 
 
 public class PersonalFragment extends Fragment {

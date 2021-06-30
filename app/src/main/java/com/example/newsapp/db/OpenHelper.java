@@ -10,20 +10,31 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 
-
 public class OpenHelper extends SQLiteOpenHelper {
 
-     //把数据库设置成可写入的状态
+
+    //把数据库设置成可写入的状态
     @Override
     public SQLiteDatabase getReadableDatabase() {
         return super.getReadableDatabase();
     }
 
-    //建表语句
+    //创建用户表
+
     public static final String CREATE_USER = "create table User ("
             + "id integer primary key autoincrement, "
             + "username text, "
             + "userpwd text)";
+
+    //创建收藏表
+
+    public static final String CREATE_COLLECT = "create table collect ("
+            + "id integer primary key autoincrement, "
+            + "username text, "
+            + "newsTitle text, "
+            + "newsDate text, "
+            + "newsImgUrl text, "
+            + "newsUrl text)";
 
     public OpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
                       int version) {
@@ -36,11 +47,9 @@ public class OpenHelper extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
 
         db.execSQL(CREATE_USER);//创建用户表
+        db.execSQL(CREATE_COLLECT);//创建收藏表
+
     }
-// //更新数据库
-//    public void update (SQLiteDatabase db,String id,String username,String userpwd){
-//        db.execSQL("UPDATE user SET userpwd=?",new Object[]{userpwd});
-//    }
 
 
     @Override
@@ -48,7 +57,6 @@ public class OpenHelper extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
 
     }
-
 
 
 }
